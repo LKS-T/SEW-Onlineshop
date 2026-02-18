@@ -1,14 +1,25 @@
 @page "/"
+@using Domain
 @using Model
+@using WebUi.Components.Components
 @rendermode InteractiveServer
+@inject ProductRepository ProductRepository
+@inject CheckoutHandler CheckoutHandler
+@inject NavigationManager NavigationManager
 <h3>Produkt Übersicht</h3>
-<div class="product-container">
-    @foreach (Product p in Products)
-    {
-        <div>
-            <!-- 
-            Füge Hier ProductComponent + Bestellmenge + Bestell-BTN ein!
-            -->
-        </div>
-    }
-</div>
+@if (Products != null)
+{
+    <div class="product-container">
+        @foreach (Product p in Products)
+        {
+            <div>
+                <ProductComponent Product="p"></ProductComponent>
+                <input type="number" @bind="Quantity"/> <br/>
+                <button @onclick="() => AddProduct(p)">Add</button>
+            </div>
+        }
+    </div>
+}
+
+<button  @onclick='() => NavigationManager.NavigateTo("/CheckoutPage")'>Checkout</button>
+<button  @onclick='() => NavigationManager.NavigateTo("/OrdersPage")'>Orders</button>

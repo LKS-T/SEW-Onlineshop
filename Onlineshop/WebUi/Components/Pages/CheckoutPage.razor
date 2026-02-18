@@ -1,0 +1,17 @@
+@page "/CheckoutPage"
+@using WebUi.Components.Components
+@inject CheckoutHandler CheckoutHandler
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+<h3>Warenkorb</h3>
+@foreach (var product in CheckoutHandler.GetProducts())
+{
+    <div>
+        <ProductComponent Product="product.Key"></ProductComponent>
+        <p>Quantity @product.Value</p>
+        <button @onclick="() => CheckoutHandler.RemoveProduct(product.Key)">Remove</button>
+    </div>
+}
+<button @onclick="CheckoutHandler.CheckoutAsync">Order</button>
+<button  @onclick='() => NavigationManager.NavigateTo("/")'>Home</button>
+

@@ -1,0 +1,6 @@
+@if (Product != null)
+{
+    <img class="product-image" src="@Product.ImageUrl"/>
+    <p>@Product.Name</p>
+    <p>@Math.Round(Product.Price,2)€</p>
+}

@@ -1,3 +1,5 @@
+using Domain;
+using Model;
 using WebUi.Components;
 
 namespace WebUi;
@@ -11,7 +13,12 @@ public class Program
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
-
+        
+        builder.Services.AddDbContext<OnlineShopContext>();
+        builder.Services.AddTransient<ProductRepository>();
+        builder.Services.AddTransient<OrderRepository>();
+        builder.Services.AddSingleton<CheckoutHandler>();
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

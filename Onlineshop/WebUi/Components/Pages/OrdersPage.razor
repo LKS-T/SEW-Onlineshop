@@ -1,0 +1,15 @@
+@page "/OrdersPage"
+@using Domain
+@using WebUi.Components.Components
+@inject OrderRepository OrderRepository
+@inject ProductRepository ProductRepository
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+<h3>Orders</h3>
+@foreach (var order in _products)
+{
+    <p>@order.Key</p>
+    <ProductComponent Product="order.Value"></ProductComponent>
+}
+<button  @onclick='() => NavigationManager.NavigateTo("/")'>Home</button>
+
