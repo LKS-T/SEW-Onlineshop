@@ -1,0 +1,103 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Rr]esult*/
+[Aa]ppPackages/
+[Bb]uild[Ll]og.*
+
+# Visual Studio cache/options directory
+.vs/
+.vscode/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+# Uncomment if using the old style of package restore
+#!**/[Pp]ackages/repositories.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# ReSharper and Rider
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# DotCover
+*.dotCover
+
+# T4 code generation
+*.Generated.cs
+
+# Backup & report files from crash dumps, etc.
+*.bak
+*.log
+*.svclog
+*.scc
+
+# Publish outputs
+**/wwwroot/dist/
+**/wwwroot/node_modules/
+**/node_modules/
+**/dist/
+*.publish.xml
+*.pubxml
+*.pubxml.user
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Azure build output
+csx/
+*.build.csdef
+
+# Others
+*.dbmdl
+*.jfm
+*.pfx
+*.snk
+*.swp
+*.tmp
+*.orig
+*.cache
+*.local.json
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# macOS
+.DS_Store
+
+# Windows
+desktop.ini
+
+# Test results / coverage
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Global tools
+tools/
+global.json
