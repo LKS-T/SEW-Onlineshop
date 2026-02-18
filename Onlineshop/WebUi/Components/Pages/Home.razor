@@ -1,7 +1,14 @@
-﻿@page "/"
-
-<PageTitle>Home</PageTitle>
-
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+@page "/"
+@using Model
+@rendermode InteractiveServer
+<h3>Produkt Übersicht</h3>
+<div class="product-container">
+    @foreach (Product p in Products)
+    {
+        <div>
+            <!-- 
+            Füge Hier ProductComponent + Bestellmenge + Bestell-BTN ein!
+            -->
+        </div>
+    }
+</div>
