@@ -4,7 +4,7 @@ namespace WebUi;
 
 public interface ICheckoutHandler
 {
-    List<(Product product, int quantity)> GetProducts();
+    Dictionary<Product,int> GetProducts();
     void AddProduct(Product p, int quantity);
     void RemoveProduct(Product p);
     void UpdateQuantity(Product p, int quantity);
